@@ -1,3 +1,4 @@
+
 import throttle from 'lodash.throttle';
 
 const inputs = document.querySelectorAll('input, textarea');
@@ -23,6 +24,12 @@ inputs.forEach((input) => {
 const form = document.querySelector('.feedback-form');
 form.addEventListener('submit', (e) => {
   e.preventDefault();
+
+  const formIsNotCompleted = ![...form.querySelectorAll('input, textarea')].every((input) => input.value);
+
+  if (formIsNotCompleted) {
+    return;
+  }
 
   const parsedData = JSON.parse(formData);
   Object.keys(parsedData).forEach((key) => {
