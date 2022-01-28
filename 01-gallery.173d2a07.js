@@ -14,4 +14,4 @@ module.exports=function(e){return new Promise(function(n,o){var r=document.creat
 },{}],0:[function(require,module,exports) {
 var b=require("TUK3");b.register("css",require("dZuk"));b.load([]).then(function(){require("TfQ5");});
 },{}]},{},[0], null)
-//# sourceMappingURL=/goit-js-hw-08/01-gallery.173d2a07.js.map
+//# sourceMappingURL=01-gallery.173d2a07.js.map
